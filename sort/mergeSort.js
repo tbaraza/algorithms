@@ -10,9 +10,10 @@
  * Second, it requires additional O(N) storage during merging operation, thus not really memory efficient and not in-place.
  */
 
-const array = [9, 2, 5, 6, 4, 3, 7, 10, 1, 8];
+const array = [9, 2, 5, 6, 4, 13, 3, 7, 10, 1, 0, 8];
 
-const mergeSortTopDown = array => {
+// function to divide the array into subarrays
+const mergeSort = array => {
   if (array.length < 2) {
     return array;
   }
@@ -21,21 +22,22 @@ const mergeSortTopDown = array => {
   const left = array.slice(0, middle);
   const right = array.slice(middle);
 
-  return mergeSortTopDown(right, left);
+  return merge(mergeSort(right), mergeSort(left));
 };
 
-const mergeTopDown = (left, right) => {
-  var array = [];
+// function to merge the sublists
+const merge = (left, right) => {
+  const sorted = [];
 
   while (left.length && right.length) {
     if (left[0] < right[0]) {
-      array.push(left.shift());
+      sorted.push(left.shift());
     } else {
-      array.push(right.shift());
+      sorted.push(right.shift());
     }
   }
-  return array.concat(left.slice()).concat(right.slice());
+  // remaining part is added to the sorted array
+  return sorted.concat(left.slice()).concat(right.slice());
 };
 
-console.log(mergeSortTopDown(array.slice()));
-// console.log(mergeSortTopDown([9, 2, 5, 6, 4]));
+console.log(mergeSort(array));
