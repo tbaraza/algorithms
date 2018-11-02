@@ -4,6 +4,7 @@
  * smaller than the pivot and elements on the right(possibly empty) are greater than the pivot.
  * qucksort recursively sorts the sublists.
  * At the conquer step(we do nothing) just merge the two list plus the pivot
+ * Complexity -> O(n logn), worst case O(n^2)
  */
 
 const array = [9, 2, 5, 6, 4, 3, 7, 10, 1, 8];
