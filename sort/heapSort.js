@@ -1,7 +1,7 @@
 /**
  * Heap sort is a sorting algorithm based on heap data structure
  * To heap sort;
- * 1. Build a max heap. A max heap is an implementation of s data structure
+ * 1. Build a max heap. A max heap is an implementation of a data structure
  * such that the key of a node is greater than or equal to the keys of its children
  * This gurantees that the root node is the largest
  * 2. Find the max element which in this case its the first element A[1]

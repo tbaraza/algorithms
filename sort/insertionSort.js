@@ -2,6 +2,8 @@
  * Insertion sort splits an array into two(sorted and unsorted)
  * loops through the array taking an element from the unsorted array and finds its position in the sorted array
  * Complexity -> O(n), worst case O(n^2)
+ *
+ * Advantages
  */
 
 const insertionSort = array => {
@@ -40,3 +42,5 @@ const insertionSort2 = items => {
   return list;
 };
 const list = [54, 26, 93, 17, 77, 31, 44, 55, 20];
+
+

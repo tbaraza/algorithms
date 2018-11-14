@@ -1,0 +1,3 @@
+1, Justin Timberlake, Title 545, Price .302
+      2, Taylor Swift, Title 723 Price .903
+      3, Mick Jagger, Title 610, Price .904, Lady Gaga, Title 118, Price .305, Johnny Cash, Title 482, Price .50
